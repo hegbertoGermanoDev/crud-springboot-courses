@@ -1,5 +1,7 @@
 package com.germano.crudspring.model;
 
+import java.sql.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -24,5 +26,11 @@ public class Course {
     
     @Column(length = 10, nullable = false)
     private String category;
+
+    @Column(nullable = false)
+    private Date dataInicio;
+
+    @Column(nullable = false)
+    private Date dataFim;
 
 }
