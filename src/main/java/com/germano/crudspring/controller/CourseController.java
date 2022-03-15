@@ -44,6 +44,8 @@ public class CourseController {
         courseUpdt.setId(id);
         courseUpdt.setName(course.getName());
         courseUpdt.setCategory(course.getCategory());
+        courseUpdt.setDataInicio(course.getDataInicio());
+        courseUpdt.setDataFim(course.getDataFim());
         return courseRepository.save(courseUpdt);
     }
 
