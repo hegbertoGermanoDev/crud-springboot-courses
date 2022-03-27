@@ -57,4 +57,9 @@ public class CourseController {
         return ResponseEntity.ok(response);
     }
 
+    @GetMapping("/{name}")
+    public List<Course> filterCourses(@PathVariable String name) {
+        return courseRepository.findByNameContains(name);
+    }
+
 }
